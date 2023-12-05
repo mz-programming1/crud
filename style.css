@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #41d4b1;
+    --fs-size: 3em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+  body{
+   
+    background: linear-gradient(140deg, #1dc9a0 0%, #26803d 50%, rgb(24, 131, 53) 75%);
+    
+    height: 100%;
+    font-family: sans-serif;
+    background-attachment: fixed; 
+  }
+  .crud{
+    width: 80%;
+    margin: auto;
+  }
+  .head{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 70px;
+  }
+  .head p{
+    margin-top: 10px;
+    color: #111;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Yellowtail', cursive;
+    padding-bottom: 60px;
+    padding-top: 20px;
+ }
+
+
+ .form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 100%;
+  }
+  
+  .form-control input {
+    background-color: #cebfbf75;
+    border: 0;
+    border-bottom: 2px #1f1b1b solid;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: #31744c;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #777;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: #21422f;
+    transform: translateY(-30px);
+  }
+  .price{
+    display: flex;
+  }
+
+  #total{
+    background: #222;
+    margin-left: 10px;
+    padding: 10px ;
+    border-radius: 5px;
+    color: #e00f0f;
+  }
+
+  #total::before{
+    content: "total : ";
+  }
+
+  
+  .button2 {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+    border-radius: 5px;
+  }
+  
+  .button2, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button2 .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 800;
+    font-size: 20px;
+    margin-left: 700px;
+  }
+  
+  .button2 .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 700px;
+
+  }
+  
+  .button2 .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .button2:hover {
+    background: #34974d;
+  }
+  
+  .button2:hover .button__text {
+    color: transparent;
+  }
+  
+  .button2:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button2:active .button__icon {
+    background-color: #2e8644;
+  }
+  
+  .button2:active {
+    border: 1px solid #2e8644;
+  }
+
+  
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 100%;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+    display: flex;
+  }
+
+table {
+  width: 100%;
+  text-align: center ;
+  margin: 5px 0;
+  background-color: #6464649d;
+  border-radius: 10px;
+}
+table td{
+  padding: 10px 0;
+  color: #fff;
+}
+table th{
+  color: #222;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.btnSearch button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 38px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: #FFFFFF;
+  background-color: #333333;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: all 0.15s linear;
+  cursor: pointer;
+  width: 40%;
+ }
+ .btnSearch button p {
+  padding-left: 160px;
+ }
+ .btnSearch button:hover {
+  background-color: #222;
+  border-color: #0c3a2f;
+  color: #37FF8B;
+  transform: translateY(-5px) scale(1.05);
+ }
+ 
+ .btnSearch button:active {
+  background-color: transparent;
+  border-color: #1DC9A0;
+  color: #1DC9A0;
+  transform: translateY(5px) scale(0.95);
+ }
+ 
+ .btnSearch button:disabled {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #8E8E93;
+  border-color: #8E8E93;
+ }
+
+.btnSearch {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+table button{
+  padding: 3px 5px;
+  border-radius: 5px;
+  border-color: transparent;
+  color: #fff;
+}
+#update{
+  background-color: #0c3a2f;
+  cursor: pointer;
+}
+#delete{
+  background-color: #920f0f;
+  cursor: pointer;
+}
+#delete:hover{
+  background-color: #b91010;
+  border: solid 1px #920f0f;
+}
+#update:hover{
+  background-color: #135e4c;
+  border: solid 1px #0c3a2f;
+}
+#discount{
+  width: 60%;
+}
+#ads{
+  width: 60%;
+
+}
+#price{
+  width: 60%;
+
+}
+#taxes{
+  width: 60%;
+
+}
+
+.button3 {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: rgb(173, 6, 6);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: #850b0b;
+  margin: 20px 0;
+ }
+ 
+ .button3, .button3 span {
+  transition: 200ms;
+ }
+ 
+ .button3 .text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  margin-left: 500px;
+ }
+ 
+ .button3 .icon {
+  position: absolute;
+  border-left: 1px solid #8b1414;
+  transform: translateX(109px);
+  width: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 700px;
+ }
+ 
+ .button3 svg {
+  width: 15px;
+  fill: #eee;
+ }
+ 
+ .button3:hover {
+  background: #8f1414;
+ }
+ 
+ .button3:hover .text {
+  color: transparent;
+ }
+ 
+ .button3:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+  margin-left: 700px;
+
+ }
+ 
+ .button3:focus {
+  outline: none;
+ }
+ 
+ .button3:active .icon svg {
+  transform: scale(0.8);
+ }
+
+
+/* Target the scrollbar track */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Target the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+/* Target the scrollbar track when hovered */
+::-webkit-scrollbar-track:hover {
+  background-color: #f0f0f0;
+}
+
+/* Target the scrollbar thumb when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}

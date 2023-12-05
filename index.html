@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="crud">
+
+        <div class="head">
+            <button data-text="Awesome" class="button">
+                <span class="actual-text">&nbsp;crud&nbsp;</span>
+                <span class="hover-text" aria-hidden="true">&nbsp;crud&nbsp;</span>
+            </button>
+            <p>product management system</p>
+        </div>
+
+
+        <div class="inputs">
+
+
+            <div class="form-control">
+                <input type="text" id="title" required="">
+                <label>
+                    <span style="transition-delay:0ms">T</span><span style
+                    ="transition-delay:50ms">i</span><span 
+                    style="transition-delay:100ms">t</span><span style=
+                    "transition-delay:150ms">l</span><span style=
+                    "transition-delay:200ms">
+                        e</span>
+                </label>
+            </div>
+
+            <div class="price">
+                <div class="form-control">
+                    <input  onkeyup="getTotal()" type="number" id="price" required="">
+                    <label>
+                        <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">r</span><span style="transition-delay:100ms">i</span><span style="transition-delay:150ms">c</span><span style="transition-delay:200ms">e</span>
+                    </label>
+
+
+                </div>
+                <div class="form-control">
+                    <input onkeyup="getTotal()" type="number" id="taxes" required="">
+                    <label>
+                        <span style="transition-delay:0ms">T</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">x</span><span style="transition-delay:150ms">e</span><span style="transition-delay:200ms">s</span>
+                    </label>
+
+
+                </div>
+                <div class="form-control">
+                    <input onkeyup="getTotal()" type="number" id="ads" required="">
+                    <label>
+
+
+                        <span style="transition-delay:0ms">A</span><span style="transition-delay:50ms">D</span><span style="transition-delay:100ms">S</span>
+                    </label>
+                </div>
+                <div class="form-control" id="dif">
+                    <input onkeyup="getTotal()" type="number" id="discount" required="">
+                    <label>
+                        <span style="transition-delay:0ms">D</span><span style="transition-delay:50ms">i</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">c</span><span style="transition-delay:200ms">o</span><span style="transition-delay:250ms">u</span><span style="transition-delay:300ms">n</span><span style="transition-delay:350ms">t</span>
+                    </label>
+                    
+                    <small id="total"></small>
+
+                </div>
+            </div>
+
+            <div class="form-control">
+                <input type="number" id="count" required="">
+                <label id="label2">
+                    <span style="transition-delay:0ms">C</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">u</span><span style="transition-delay:150ms">n</span><span style="transition-delay:200ms">t</span>
+                </label>
+            </div>
+
+            <div class="form-control">
+                <input type="text" id="category" required="">
+                <label >
+                    <span style="transition-delay:0ms">C</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">t</span><span style="transition-delay:150ms">e</span><span style="transition-delay:200ms">g</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">y</span>
+                </label>
+            </div>
+            
+
+            
+<button type="button" class="button2" id="supmit">
+    <span class="button__text">Create</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+  </button>
+
+        </div>
+
+
+        <div class="outputs">
+            
+
+                <div class="search" id="search5" >
+
+                    <div class="form-control" id="nu">
+                        <input onkeyup="searchData(this.value)" type="text" id="search" required="">
+                        <label id="kk">
+                            <span style="transition-delay:0ms">S</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">c</span><span style="transition-delay:250ms">h</span>
+                        </label>
+                        
+
+    
+                    </div>
+
+                </div>
+               <div class="searchBlock"> 
+
+                <div class="btnSearch">
+                    
+                        <button onclick="getSearchMood(this.id)" class="b1" id="search1"><p>search by : title </p></button>
+                        <button onclick="getSearchMood(this.id)" class="b2" id="search2"><p>search by : category </p></button>
+
+                </div> 
+
+        
+            </div>
+        </div>
+        <div id="deleteAll"></div>
+        <table>
+            <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+            </tr>
+
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="main.js"></script>     
+</body>
+</html>
